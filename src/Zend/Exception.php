@@ -46,7 +46,7 @@ class Zend_Exception extends Exception
             parent::__construct($msg, $code);
             $this->_previous = $previous;
         } else {
-            parent::__construct($msg, $code, $previous);
+            parent::__construct((string) $msg, (int) $code, $previous);
         }
     }
 

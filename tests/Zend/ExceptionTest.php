@@ -45,6 +45,14 @@ class Zend_ExceptionTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('msg', $e->getMessage());
     }
 
+    /**
+     * @doesNotPerformAssertions
+     */
+    public function testStringCodeDoesNotThrowError()
+    {
+        $e = new Zend_Exception('msg', 'abc');
+    }
+
     public function testCode()
     {
         $e = new Zend_Exception('msg', 100);

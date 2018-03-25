@@ -1,1 +1,4 @@
 parameters:
+    ignoreErrors:
+        - '#Casting to (string|int) something that.s already (string|int)\.#'
+        - '#Parameter \#2 \$code of class Zend_Exception constructor expects int, string given\.#'
