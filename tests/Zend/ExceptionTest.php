@@ -31,6 +31,9 @@
  */
 class Zend_ExceptionTest extends PHPUnit\Framework\TestCase
 {
+    /**
+     * @return void
+     */
     public function testConstructorDefaults()
     {
         $e = new Zend_Exception();
@@ -39,6 +42,9 @@ class Zend_ExceptionTest extends PHPUnit\Framework\TestCase
         $this->assertNull($e->getPrevious());
     }
 
+    /**
+     * @return void
+     */
     public function testMessage()
     {
         $e = new Zend_Exception('msg');
@@ -47,18 +53,25 @@ class Zend_ExceptionTest extends PHPUnit\Framework\TestCase
 
     /**
      * @doesNotPerformAssertions
+     * @return void
      */
     public function testStringCodeDoesNotThrowError()
     {
         $e = new Zend_Exception('msg', 'abc');
     }
 
+    /**
+     * @return void
+     */
     public function testCode()
     {
         $e = new Zend_Exception('msg', 100);
         $this->assertEquals(100, $e->getCode());
     }
 
+    /**
+     * @return void
+     */
     public function testPrevious()
     {
         $p = new Zend_Exception('p', 0);
@@ -66,6 +79,9 @@ class Zend_ExceptionTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($p, $e->getPrevious());
     }
 
+    /**
+     * @return void
+     */
     public function testToString()
     {
         $p = new Zend_Exception('p', 0);
