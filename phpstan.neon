@@ -3,7 +3,7 @@ parameters:
     level: 8
     paths:
         - ./
-    excludes_analyse:
+    excludePaths:
         - %rootDir%/../../../vendor/*
     ignoreErrors:
         - '#Parameter \#2 \$code of class Zend_Exception constructor expects int, string given\.#'
