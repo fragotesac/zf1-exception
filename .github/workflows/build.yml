@@ -49,7 +49,11 @@ jobs:
             - name: Test
               run: composer test-with-coverage
             - name: Upload Coverage
-              run: bash <(curl -s https://codecov.io/bash) -f ./clover.xml
+              uses: codecov/codecov-action@v2
+              with:
+                files: ./clover.xml
+                fail_ci_if_error: true
+                verbose: true
     merge-me:
         name: Merge me!
         needs:
